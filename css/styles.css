@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+    --blue: #3a86ff;
+    --purple: #8338ec;
+    --pink: #ff006e;
+    --orange: #fb5607; 
+    --yellow: #ffbe0b;
+    --grey: #505050;
+
+    --a-blue: #3a85ff74;
+
+    --d-blue: #3071da;
+    --d-purple:  #7433d0;
+    --d-pink: #e00262;
+    --d-orange: #dc4c09; 
+    --d-yellow: #e0a80c;
+
+
+}
+
+.box {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.big-rounded {
+    border-radius: 25px;
+}
+
+.sf {
+    font-size: 2vmin;
+}
+
+.mf {
+    font-size: 3vmin;
+}
+
+.lf {
+    font-size: 5vmin;
+}
+
+.o-border {
+    border: 5px solid var(--orange);
+}
+
+.tbl-blue {
+    background-color: var(--a-blue);
+}
+
+.atc {
+    text-align: center;
+}
+
+.anim-bg-bpp {
+    background: linear-gradient(45deg, var(--blue), var(--purple));
+    background-size: 200% 200%;
+    animation: background-rotate 5s ease infinite;
+}
+
+@keyframes background-rotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+table {
+    margin: 2vmin 0;
+}
+
+table, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.lex {
+    font-family: Lexend, sans-serif;
+}

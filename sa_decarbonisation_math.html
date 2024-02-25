@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body class="anim-bg-bpp">
+        <div class="topper box">
+            <img src="./img/logo.png">
+            <h2>School of Mathematical Sciences</h2>
+            <h2>School of Education</h2>
+            <img src="./img/University_of_Southampton_Logo.png">
+        </div>
+        <div class="col-cont box sf o-border">
+            <h2>Math: Which policy would lead to the biggest reduction in carbon?</h2>
+            <p>The scientists model shows 8 results of different policy combinations:</p>
+            <table>
+                <tr>
+                    <th>Policy Combination</th><th>Carbon Reduction</th>
+                </tr>
+                <tr>
+                    <td>None</td><td class="tbl-blue">0%</td>
+                </tr>
+                <tr>
+                    <td>Ban on SUPs</td><td class="tbl-blue">5%</td>
+                </tr>
+                <tr>
+                    <td>Driving less</td><td class="tbl-blue">5%</td>
+                </tr>
+                <tr>
+                    <td>Eat less meat</td><td class="tbl-blue">5%</td>
+                </tr>
+                <tr>
+                    <td>Ban on SUPs, Driving less</td><td class="tbl-blue">15%</td>
+                </tr>
+                <tr>
+                    <td>Ban on SUPs, Eat less meat</td><td class="tbl-blue">8%</td>
+                </tr>
+                <tr>
+                    <td>Driving less, Eat less meat</td><td class="tbl-blue">20%</td>
+                </tr>
+                <tr>
+                    <td>Ban on SUPs, Driving Less, Eat less meat</td><td class="tbl-blue">30%</td>
+                </tr>
+            </table>
+            <p>We can start by looking at how much value each policy adds to each of the combinations.</p>
+            <h3>Ban on SUPs</h3>
+            <p>There are 5 policy permutations that don't have the policy "Ban on SUPs". They are:</p> 
+            <ul>
+                <li>(None)</li> <li>(Driving less)</li> <li>(Eat less meat)</li> <li>(Driving less, Eat less meat)</li><li>(Eat less meat, Driving less)</li>
+            </ul>
+            <p>The first thing we need to do is add all the value that Ban on SUPs brings to these other policies.</p>
+            <p>The value that the policy Ban on SUPs adds is the difference between the policy combination including Ban on SUPs minus policy combination without Ban on SUPs.</p>
+            $$ 
+                \class{lex} {
+                    \begin{array}{rr} 
+                        \text{(Ban on SUPs)} & + \\
+                        \text{(Ban on SUPs)} - \text{(None)} & + \\
+                        \text{(Ban on SUPs, Driving less)} - \text{(Driving less)} & + \\
+                        \text{(Ban on SUPs, Eat less meat)} - \text{(Eat less meat)} & + \\
+                        \text{(Ban on SUPs, Driving less, Eat less meat)} - \text{(Driving less, Eat less meat)} & + \\
+                        \text{(Ban on SUPs, Eat less meat, Driving less)} - \text{(Eat less meat, Driving less)} \\
+                    \end{array}
+                }
+            $$
+            <p>Which is:</p>
+            $$ 
+                \class{lex} {
+                    \begin{array}{rr} 
+                        5 & + \\
+                        5 - 0 & + \\
+                        15 - 5 & + \\
+                        8 - 5 & + \\
+                        30 - 20 & + \\
+                        30 - 20 & = 43%
+                    \end{array}
+                }
+            $$
+            <p>The second thing we need to do is divide this total by the total number of ways to arrange our three policies. This is 6.</p>
+            <p>So the total impact that a "Ban on SUPs" policy has on the model is: \(\class{lex} { \frac{43}{6}\text{%} \approx 7.166\dot{6}}\)</p>
+            <h3>Driving Less</h3>
+            <p>We can go through the same process with the Driving less policy. As before, there are 5 policy permutations that don't have the policy "Driving less".</p>
+            <ul>
+                <li>(None)</li> <li>(Ban on SUPs)</li> <li>(Eat less meat)</li> <li>(Ban on SUPs, Eat less meat)</li><li>(Eat less meat, Ban on SUPs)</li>
+            </ul>
+            <p>Step One:</p>
+            $$ 
+                \class{lex} {
+                    \begin{array}{rr} 
+                        5 & + \\
+                        5 - 0 & + \\
+                        15 - 5 & + \\
+                        20 - 5 & + \\
+                        30 - 8 & + \\
+                        30 - 8 & = 79%
+                    \end{array}
+                }
+            $$
+            <p>Step Two</p>
+            <p>The total impact that a "Driving less" policy has on the model is: \(\class{lex} { \frac{79}{6}\text{%} \approx 13.166\dot{6}}\)</p>
+            <h3>Eat less meat</h3>
+            <p>There are 5 policy permutations that don't have the policy "Eat less meat".</p>
+            <ul>
+                <li>(None)</li> <li>(Ban on SUPs)</li> <li>(Driving less)</li> <li>(Ban on SUPs, Driving less)</li><li>(Driving less, Ban on SUPs)</li>
+            </ul>
+            <p>Step One:</p>
+            $$ 
+                \class{lex} {
+                    \begin{array}{rr} 
+                        5 & + \\
+                        5 - 0 & + \\
+                        8 - 5 & + \\
+                        20 - 5 & + \\
+                        30 - 15 & + \\
+                        30 - 15 & = 58%
+                    \end{array}
+                }
+            $$
+            <p>Step Two</p>
+            <p>The total impact that a "Eating less meat" policy has on the model is: \(\class{lex} { \frac{58}{6}\text{%} \approx 9.666\dot{6}}\)</p>
+            <h2>The results</h2>
+            <p>Using some mathematics we were able to work out that the <b>Driving less policy</b> has the most impact on the model.</p>
+            <p>Notice as well, if we add all of our impact scores together we get \(\class{lex} { \frac{43 + 79 + 58}{6} = \frac{180}{6} = 30% }\) which is exactly the value of all the policies combined.</p>
+        </div>
+        <div class="col-cont box sf o-border">
+            <h2>Advanced</h2>
+            <p>What we just calculated is called the <b>Shapley Value</b> for each of the policies. The Shapley Value can be used for lots of things, like splitting bills. We used it to solve a machine learning problem. Sometimes in machine learning models you know the inputs and the outputs but you want to know which input has the most impact on the model. As we have seen, the Shapley Value can be used to calculate that impact.</p>
+            <p>Let's describe it a little more abstractly now. Suppose we have a machine learning model, and an input, \(i\), that we want to know the Shapley Value for (\(\varphi_{i}\)). We start by working out all the input permutations that don't include our input \(i\). If we have a set of \(N\), and we call each collection, or <b>coalition</b> of inputs \(S\), we write the set of all coaltions that don't have \(i\) as:</p>
+            $$ S \subseteq N \setminus \{i\}$$
+            <p>All this means is that we get our <b>coalitions</b> from the main collection \(N\) by pretending that \(i\) isn't there.</p>
+            <p>Next we need to work out the ways that the <b>coalition can be arranged</b>. In our main collection of inputs \(N\), there are \(|N|\) inputs. In our coalition \(S\), there are \(|S|\) inputs. We need to find the total ways we can arrange our coalition and divide it by the total number of ways we can arrange our set of inputs:</p>
+            $$ \frac{|S|!(|N| - |S| - 1)!}{|N|!}$$
+            <p>We multiply this arrangement formula by the difference in values the coalition has with \(i\), which is written like this \(\nu\{S\cup\{i\}\}\), and the value of the coaliton without \(i\), which is written like this \(\nu\{S\}\).</p>
+            $$ \frac{|S|!(|N| - |S| - 1)!}{|N|!}\left(\nu\{S\cup\{i\}\} - \nu\{S\}\right)$$
+            <p>Lastly, we add up all the values we've found. We use the symbol \(\Sigma\) to represent that sum:</p>
+            $$ \varphi_{i} := \sum_{S \subseteq N \setminus \{i\}}\frac{|S|!(|N| - |S| - 1)!}{|N|!}\left(\nu\{S\cup\{i\}\} - \nu\{S\}\right)$$
+            <br>
+            <p>This is a very important part of a type of mathematics called <b>Cooperative Game Theory</b> and it can be used to analyze and improve machine learning models.</p>
+        </div>
+    </body>
+</html>

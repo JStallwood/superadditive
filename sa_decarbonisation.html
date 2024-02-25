@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+        <link rel="stylesheet" href="./css/img-slides.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/styles.css">
+    </head>
+    <body onload="initialize()" class="anim-bg-bpp">
+        <div class="topper box">
+            <img src="./img/logo.png">
+            <h2>School of Mathematical Sciences</h2>
+            <h2>School of Education</h2>
+            <img src="./img/University_of_Southampton_Logo.png">
+        </div>
+        <div class="col-cont box mf o-border">
+            <img src="./img/climate.jpg" style="width: 40vw; align-self: center; padding: 2vmin 0;">
+            <p>Some climate scientists have created a machine learning model that can predict how much carbon can be reduced by implementing policies. 
+                Their model has 3 inputs.</p>
+            <ul>
+                <li>Banning single-use plastics</li>
+                <li>Driving less</li>
+                <li>Eating less meat</li>
+            </ul>
+            <p>The scientists' model shows what the reduction in carbon would be with different combinations of policies. Active policies are shown in blue.</p>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-0.png">
+            </div>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-1.png">
+            </div>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-2.png">
+            </div>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-3.png">
+            </div>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-12.png">
+            </div>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-13.png">
+            </div>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-23.png">
+            </div>
+            <div id="model-slides" class="slides-cont">
+                <img src="./img/dec-123.png">
+            </div>
+            <div class="slide-nav">
+                <button onclick="changeSlide(-1)" class="nav-btn">&lt;</button>
+                <button onclick="changeSlide(1)" class="nav-btn">></button>
+            </div>
+
+            <p>Even though it would make most sense to implement all three policies, the government only wants to start with one. 
+                They have asked the scientists which of the policies is most impactful. 
+                Because the scientists don't know, they've turned to you to find out for them.</p>
+        </div>
+        <div class="col-cont box big-rounded lf atc">
+            <p>Using the data from the scientists' model, can you tell them which policy leads to the biggest reduction in carbon?</p>
+        </div>
+
+        <script src="./js/slides.js"></script>
+    </body>
+</html>

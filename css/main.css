@@ -1,0 +1,34 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin: 0;
+    font-family: Lexend, sans-serif;
+}
+
+.col-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    padding: 0 2vmin;
+    margin: 2vmin 0;
+    background-color: white;
+}
+
+.topper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5vmin;
+    width: 100vw;
+    background-color: white;
+    padding: 1vmin 0;
+}
+
+.topper img {
+    width: 10vw;
+}
